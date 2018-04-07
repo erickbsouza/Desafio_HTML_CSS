@@ -1,0 +1,123 @@
+
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	margin: 0;
+}
+
+header{
+	background-image: url("../images/banner.jpg"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 880px;
+	top: 0px;
+	position: relative;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.botaoheader{
+	position: absolute;
+	display: inline;
+	color: white;
+	top:450px;
+	right: 570px;
+	float: none;
+}
+
+#botaoesq{
+	outline-style: solid;
+	outline-offset: 15px;
+}
+#botaodir{
+	outline-style: solid;
+	outline-offset: 15px;
+}
+
+#icoheader{
+	top:325px;
+	right: 820px;
+	position: absolute;
+}
+
+
+#aprenda{
+	color: white;
+	font-size: 52px;
+	position: absolute;
+	top:307px;
+	right: 255px;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+/* Estilo da barra de navegação*/
+nav{
+	position: fixed;
+	top:0;
+	width: 100%;
+	background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: 20px 45px;
+    overflow: hidden;
+    font-size: 18px;
+    background-color: black;
+    opacity: 0.7;
+
+}
+/* Estilo dos links da nav bar */
+nav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 45px 10px;
+    text-decoration: none;
+}
+
+/* Muda de cor ao passar o mouse */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+	nav{
+		background-image: none;
+		position: absolute;
+		z-index: 1;
+	}
+    nav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+section1{
+	width: 100%;
+	z-index: 2;
+}
+
+t1{
+	padding: 15px;
+	text-align: center;
+	font-size: 35px;
+	padding-left: 450px;
+}
+
+#pcs{
+	padding: 20px;
+	float: left;
+}
+
+p1{
+	padding: 50px;
+	padding-bottom: 80px;
+	float: right;
+	font-size: 15px;
+	text-align:justify;
+}
