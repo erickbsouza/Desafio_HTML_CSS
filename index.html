@@ -13,14 +13,40 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="icon" href="images/ico.png">
 	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
+    <!--MEU CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- BIBLIOTECA JQUERY -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- BIBLIOTECA JQUERY UI -->
+    <script src="js/jquery-ui.js"></script>
+    <!-- BIBLIOTECA TOASTR (notificacao personalizada) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js"></script>
+    <!--MEU JS-->
+    <script type="text/javascript" src="js/script.js"></script>
+
 </head>
 <body>
+	<div id="alerta" hidden="">
+         <div class="title">Receba Nossas Novidades <i class="fa fa-times" onclick="toggleAlert()"></i></div>
+         <div class="body">
+            <form id="novidadesform" name="contact-form" method="POST" >
+               <label>e-mail:</label>
+               <input type="text" name="email" placeholder="digite seu email" id="inputemail">
+               <button type="submit">Enviar</button>
+            </form>
+            <div class="resultado"></div>
+         </div>
+      </div>
+      <div id="contador"></div>
 	<header>
 		<div id="aprenda">APRENDA A<br> DESENVOLVER COM A GTi JR.</div>
 		<img id="icoheader" src="images/icone-header.png" alt="icopc">
 		<div class="botaoheader">
-			<div id="botaoesq">HTML 5 + CSS3 + JS</div>
-			<div id="botaodir">Ruby On Rails</div>
+			<a href="#" class="botaoh"><div id="botaoesq" onclick="scrollar()">HTML 5 + CSS3 + JS</div></a>
+			<a href="#" class="botaoh"><div id="botaodir" onclick="scrollar2()">Ruby On Rails</div></a>
 		</div>
 	</header>
 
@@ -36,13 +62,13 @@
 			<div id="separacao">
 				<h1></h1>
 			</div>
-			<div id="pcs">
+			<div id="pcs" title="'-'">
 				<img  src="images/pcs.png">
 			</div>
 			<div id="material">
 				<h1>MATERIAL TRAINEE 2018</h1>
 			</div>
-			<div id="paragrafotrainee">
+			<div id="paragrafotrainee" title="Nem tente ir no google tradutor">
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisc elit. Aenean placerat est id tristique rutrum. Donec interdum volutpat eros, non malesuada magna dignissim eget. Morbi mattis purus vel erat tincidunt, vel accumsan velit pulvinar. Maecenas eu mattis risus. In hac habitasse platea dictumst. integer pretium commodo vulputate. Pellentesque pulvinar suscipit dolor, ut semper nunc facilisis ac. Pellentesque at varius sapien.
 				</p>
@@ -56,8 +82,8 @@
 		<div id="titulo">
 			<h>HTML 5 | CSS3 | JAVASCRIPT</h>
 		</div>
-		<div class="responsive">
-		  <div class="gallery">
+		<div class="responsive" title="clica aquiii!">
+		  <div class="gallery" onmouseover="mudarCor()" onmouseleave="mudarCorback()">
 		    <a target="_blank" href="#">
 		      <div id="image1">
 		      	<div class="image1pos">
@@ -66,14 +92,14 @@
 		      	<p class="textoimagem">HTML 5 - Introdução</p>
 		      	<p class="textoimagem">Postado por patrick</p>
 		      </div>
-		      <div class="desc">Postado dia 04/08/2017
-		    	<div class="estude">ESTUDAR AGORA</div>
+		      <div class="desc" id="r1">Postado dia 04/08/2017
+		    	<div class="estude" id="e1" onmouseover="core1()" onmouseleave="core1back()">ESTUDAR AGORA</div>
 		      </div>
 		    </a>
 		  </div>
 		</div>
-		<div class="responsive">
-		  <div class="gallery">
+		<div class="responsive" title="estudaaaaaa">
+		  <div class="gallery" onmouseover="mudarCor2()" onmouseleave="mudarCorback2()">
 		    <a target="_blank" href="#">
 		      <div id="image1">
 		      	<div class ="image1pos">
@@ -82,14 +108,14 @@
 		      	<p class="textoimagem">Lista de Livros</p>
 		      	<p class="textoimagem">Postado por rayanne</p>
 		      </div>
-			  <div class="desc">Postado dia 04/08/2017
-			    <div class="estude"><t>ESTUDAR AGORA</t></div>
+			  <div class="desc" id="r2">Postado dia 04/08/2017
+			    <div class="estude" id="e2" onmouseover="corE2()" onmouseleave="corE2back()"><t>ESTUDAR AGORA</t></div>
 			  </div>
 		    </a>
 		  </div>
 		</div>
-		<div class="responsive">
-		  <div class="gallery">
+		<div class="responsive" title="clica nao!">
+		  <div class="gallery" onmouseover="mudarCor3()" onmouseleave="mudarCorback3()">
 		    <a target="_blank" href="#">
 		    	<div id="image2">
 		    		<div class ="image1pos">
@@ -98,14 +124,14 @@
 		      		<p class="textoimagem">HTML 5 - Introdução</p>
 		      		<p class="textoimagem">Postado por patrick</p>
 		    	</div>
-		    	<div class="desc">Postado dia 02/04/2018
-		    		<div class="estude">ESTUDAR AGORA</div>
+		    	<div class="desc" id="r3">Postado dia 02/04/2018
+		    		<div class="estude" id="e3" onmouseover="corE3()" onmouseleave="corE3back()">ESTUDAR AGORA</div>
 		    	</div>
 		    </a>
 		  </div>
 		</div>
 
-		<div class="responsive">
+		<div class="responsive" onmouseover="mudarCor4()" onmouseleave="mudarCorback4()" title="brincadeirinha">
 		  <div class="gallery">
 		    <a target="_blank" href="#">
 		    	<div id="image4">
@@ -116,8 +142,8 @@
 		    		<p class="textoimagem">HTML 5 - Introdução</p>
 		      		<p class="textoimagem">Postado por patrick</p>
 		    	</div>
-		    	<div class="desc">Postado dia 02/04/2018
-		    		<div class="estude">ESTUDAR AGORA</div>
+		    	<div class="desc" id="r4">Postado dia 02/04/2018
+		    		<div class="estude" id="e4" onmouseover="corE4()" onmouseleave="corE4back()">ESTUDAR AGORA</div>
 		    	</div>
 		    </a>
 		  </div>
@@ -137,7 +163,7 @@
 		<div id="titulo2">
 			<h>Ruby On Rails</h>
 		</div>
-		<div class="responsive">
+		<div class="responsive" title="nada acontece">
 		  <div class="gallery">
 		    <a target="_blank" href="#">
 		    	<div id="image5">
@@ -154,7 +180,7 @@
 		    </div>
 		  </div>
 		</div>
-		<div class="responsive">
+		<div class="responsive" title="para de passar o mouse cara">
 		  <div class="gallery">
 		    <a target="_blank" href="#">
 		        <div id="image6">
@@ -170,7 +196,7 @@
 		    </a>
 		  </div>
 		</div>
-		<div class="responsive">
+		<div class="responsive" title="parabéns vc">
 		  <div class="gallery">
 		    <a target="_blank" href="#">
 		      <div id="image7">
@@ -187,7 +213,7 @@
 		  </div>
 		</div>
 
-		<div class="responsive">
+		<div class="responsive" title="conseguiu nada">
 		  <div class="gallery">
 		    <a target="_blank" href="#">
 		      <div id="image6">
